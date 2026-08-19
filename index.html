@@ -1,3 +1,29 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>教習コンシェルジュ</title><meta name="description" content="教習進捗セルフチェック"><link rel="stylesheet" href="style.css"></head>
-<body><main class="app"><header><div class="logo">J</div><div><b>教習コンシェルジュ</b><small>教習進捗セルフチェック</small></div><span class="local">端末内保存</span></header><div id="screen"></div><nav id="nav" hidden><button data-tab="home" class="active"><i>⌂</i>ホーム</button><button data-tab="input"><i>✓</i>進捗入力</button><button data-tab="settings"><i>⚙</i>設定</button></nav></main><script src="script.js"></script></body></html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>教習コンシェルジュ</title>
+  <meta name="description" content="教習進捗セルフチェック">
+  <link rel="stylesheet" href="style.css">
+  <style>.pack-help{font-size:10px;line-height:1.55;color:#6f7f91;margin:8px 0 16px}.deadline.safety i{background:#e9f7ef;color:#149862}.deadline.safety.urgent i{background:#fff0e8;color:#e95b20}</style>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="logo">J</div>
+      <div><b>教習コンシェルジュ</b><small>次にすることが、すぐ分かる</small></div>
+      <span class="local">端末内保存</span>
+    </header>
+    <div id="screen"></div>
+    <nav id="nav" hidden>
+      <button data-tab="home" class="active"><i>⌂</i>ホーム</button>
+      <a href="https://www.e-license.jp/el31/lOZqZKHC3uM-brGQYS-1OA%3D%3D" target="_blank" rel="noopener noreferrer"><i>▣</i>WEB予約</a>
+      <a href="https://study.neumann-line.net/home" target="_blank" rel="noopener noreferrer"><i>▶</i>オンライン学科</a>
+      <a href="https://www.musasi.jp/jds/requirements" target="_blank" rel="noopener noreferrer"><i>▤</i>ムサシ</a>
+      <button data-tab="settings"><i>⚙</i>設定</button>
+    </nav>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
