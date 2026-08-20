@@ -30,9 +30,9 @@ function enhanceView(){
       if(guideCard&&deadlineGrid)deadlineGrid.insertAdjacentElement('beforebegin',guideCard);
       const key=state.stage===1?'skill1':'skill2',skill=state[key],max=limits()[key],extra=Math.max(0,skill-max);
       const description=quick.querySelector('.skill-entry p'),count=quick.querySelector('.counter strong'),skillStat=document.querySelector('.stats span');
-      if(description)description.textContent=extra?`規定${max}時限を修了・追加教習${extra}回目`:`${skill}回目まで終了（規定${max}時限）`;
-      if(count&&extra)count.innerHTML=`<small>追加</small>${extra}`;
-      if(skillStat)skillStat.innerHTML=extra?`技能 <em>${max}</em>＋追加${extra}`:`技能 <em>${skill}</em>/${max}`;
+      if(description)description.innerHTML=extra?`${skill}回目まで終了 <span class="extra-badge">追加 ＋${extra}</span>`:`${skill}回目まで終了（規定${max}時限）`;
+      if(count)count.textContent=skill;
+      if(skillStat)skillStat.innerHTML=extra?`技能 <em>${skill}</em> <small class="extra-inline">追加＋${extra}</small>`:`技能 <em>${skill}</em>/${max}`;
     }
   }
   if(!setup&&tab==='settings'&&isCar()){
