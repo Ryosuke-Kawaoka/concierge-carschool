@@ -26,8 +26,9 @@ function enhanceView(){
     if(quick){
       quick.insertAdjacentHTML('beforebegin',compactDeadlineView());
       quick.insertAdjacentHTML('afterend',homeClearView());
-      const guideCard=document.querySelector('.guide'),deadlineGrid=document.querySelector('.deadline-grid');
-      if(guideCard&&deadlineGrid)deadlineGrid.insertAdjacentElement('beforebegin',guideCard);
+      const guideCard=document.querySelector('.guide'),statusCard=document.querySelector('.status-card');
+      if(statusCard)quick.insertAdjacentElement('beforebegin',statusCard);
+      if(guideCard&&statusCard)statusCard.appendChild(guideCard);
       const key=state.stage===1?'skill1':'skill2',skill=state[key],max=limits()[key],extra=Math.max(0,skill-max);
       const description=quick.querySelector('.skill-entry p'),count=quick.querySelector('.counter strong'),skillStat=document.querySelector('.stats span');
       if(description)description.innerHTML=extra?`${skill}回目まで終了 <span class="extra-badge">追加 ＋${extra}</span>`:`${skill}回目まで終了（規定${max}時限）`;
