@@ -28,8 +28,8 @@ function enhanceView(){
       quick.insertAdjacentHTML('afterend',homeClearView());
       const guideCard=document.querySelector('.guide'),statusCard=document.querySelector('.status-card');
       const clearCard=document.querySelector('.clear-card');
-      if(statusCard&&clearCard)clearCard.insertAdjacentElement('beforebegin',statusCard);
-      else if(statusCard)quick.insertAdjacentElement('afterend',statusCard);
+      if(statusCard)quick.insertAdjacentElement('afterend',statusCard);
+      if(clearCard&&statusCard)statusCard.insertAdjacentElement('afterend',clearCard);
       if(guideCard&&statusCard)statusCard.appendChild(guideCard);
       const key=state.stage===1?'skill1':'skill2',skill=state[key],max=limits()[key],extra=Math.max(0,skill-max);
       const description=quick.querySelector('.skill-entry p'),count=quick.querySelector('.counter strong'),skillStat=document.querySelector('.stats span');
